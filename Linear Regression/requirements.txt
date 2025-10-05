@@ -1,0 +1,16 @@
+# Direct dependencies required to run `lr_train.py` (trimmed)
+# Pin versions to reproduce the environment used while developing this project.
+numpy==1.24.3
+pandas==2.3.3
+scikit-learn==1.6.1
+seaborn==0.13.2
+matplotlib==3.9.4
+joblib==1.5.2
+openpyxl==3.1.5
+scipy==1.13.1
+
+# To recreate the venv:
+# python -m venv .venv
+# .venv\Scripts\Activate.ps1
+# python -m pip install --upgrade pip
+# python -m pip install -r requirements.txt

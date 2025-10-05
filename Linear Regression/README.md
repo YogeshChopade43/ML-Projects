@@ -1,3 +1,45 @@
+Linear Regression (Salary prediction)
+====================================
+
+This small project trains and evaluates linear models (LinearRegression, RidgeCV, LassoCV) on a salary dataset.
+
+Setup
+-----
+1. Create and activate a virtual environment (PowerShell):
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+2. Run the training/evaluation script (default path expects `salary/Salary_dataset.csv`):
+
+```powershell
+# from project root
+python lr_train.py --data salary/Salary_dataset.csv
+```
+
+Options
+-------
+- `--data` or `-d`: path to CSV or Excel file. Default: `salary/Salary_dataset.csv`.
+- `--target` or `-t`: specify the target column name (default: last column).
+- `--poly` or `-p`: polynomial degree (default 1). Use `--poly 2` to try degree-2 features.
+
+Artifacts
+---------
+- `model.joblib` — saved best model pipeline and feature list.
+- Plots — residuals are shown interactively when the script runs.
+
+Next recommended steps
+----------------------
+1. Drop index-like columns before training (e.g. `Unnamed: 0`).
+2. Try `--poly 2` to see if polynomial features help.
+3. Compare tree-based models (RandomForest, LightGBM) for potential improvements.
+4. If you plan to deploy, collect more data or use repeated CV / LOOCV to stabilize estimates.
+
+If you'd like, I can automatically drop index columns and re-run experiments, add tree-based models for comparison, and output a short PDF report with metrics and plots.
 # Salary Prediction using Linear Regression
 
 This project implements a **Linear Regression model** to predict employee salaries based on their years of experience. It demonstrates the end-to-end workflow of a simple Machine Learning project — including data preprocessing, model training, evaluation, and visualization.
