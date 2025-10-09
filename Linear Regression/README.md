@@ -49,16 +49,14 @@ This project implements a **Linear Regression model** to predict employee salari
 ## 📂 Project Structure
 
 ```
-├── data/
-│   └── salary_data.csv     # Dataset (YearsExperience, Salary)
-├── src/
-│   ├── train_model.py      # Train and evaluate linear regression
-│   ├── visualize.py        # Plot regression line
-│   └── utils.py            # Helper functions
-├── requirements.txt        # Python dependencies
+├── salary/
+│   └── Salary_dataset.csv     # Dataset
+├── venv
+├── lr_train.py
+├── requirements.txt
 ├── README.md               # Project documentation
 └── results/
-    └── regression_plot.png # Saved visualization
+    └── results.txt
 ```
 
 ---
